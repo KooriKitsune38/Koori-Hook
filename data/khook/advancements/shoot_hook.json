@@ -1,0 +1,15 @@
+{
+    "criteria": {
+        "shoot":{
+            "trigger": "shot_crossbow",
+            "conditions": {
+                "item": {
+                    "nbt":"{k.GrapplingHook:1b}"
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "khook:shooting/find_arrow"
+    }
+}

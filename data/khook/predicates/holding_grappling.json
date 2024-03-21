@@ -1,0 +1,17 @@
+{
+  "condition": "any_of",
+  "terms": [
+    {
+      "condition": "entity_properties",
+      "entity": "this",
+      "predicate": {
+        "equipment": {
+          "mainhand": {
+            "items": ["crossbow"],
+            "nbt": "{k.GrapplingHook:1b}"
+          }
+        }
+      }
+    }
+  ]
+}

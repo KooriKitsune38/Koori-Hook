@@ -1,0 +1,29 @@
+{
+    "values": [
+      "minecraft:air",
+      "minecraft:cave_air",
+      "minecraft:void_air",
+      "minecraft:structure_void",
+      "minecraft:grass",
+      "minecraft:tall_grass",
+      "#minecraft:doors",
+      "#minecraft:all_signs",
+      "#minecraft:all_hanging_signs",
+      "#minecraft:banners",
+      "#minecraft:cave_vines",
+      "minecraft:snow",
+      "#minecraft:crops",
+      "#minecraft:trapdoors",
+      "#minecraft:climbable",
+      "#minecraft:buttons",
+      "minecraft:lever",
+      "minecraft:redstone_wire",
+      "#minecraft:rails",
+      "#minecraft:wool_carpets",
+      "#minecraft:underwater_bonemeals",
+      "minecraft:water",
+      "#minecraft:flowers",
+      "#minecraft:flower_pots"
+    ]
+  }
+  

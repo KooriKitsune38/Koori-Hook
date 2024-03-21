@@ -1,0 +1,15 @@
+{
+    "criteria": {
+        "shoot":{
+            "trigger": "using_item",
+            "conditions": {
+                "item": {
+                    "nbt":"{k.GrapplingHook:1b}"
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "khook:control/charging_crossbow"
+    }
+}

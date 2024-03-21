@@ -1,0 +1,4 @@
+{
+    "function": "set_nbt",
+    "tag": "{k.GrapplingHook:1b,Charged:1b,ChargedProjectiles:[{id:\"minecraft:arrow\",tag:{k.HookArrow:1b},Count:1b}]}"
+}
