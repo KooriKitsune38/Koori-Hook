@@ -9,5 +9,8 @@ execute as @e[type=arrow,tag=k.HookArrow] if score @s k.UUIDS = .temp k.UUIDS ru
 # Remove tag
 tag @s remove k.ShotHook
 
+# If offhand
+execute if predicate khook:offhand_grappling run function khook:control/swap_slot
+
 # Sound
-playsound minecraft:item.trident.riptide_3 ambient @a ~ ~ ~ 1 2
+execute at @s run playsound minecraft:item.trident.riptide_3 ambient @a ~ ~ ~ 1 2
