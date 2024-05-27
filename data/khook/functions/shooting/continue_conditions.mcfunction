@@ -2,10 +2,7 @@
 
 # Check if arrow exists
 scoreboard players operation .temp k.UUIDS = @s k.UUIDS
-execute store success score .hooked k.UUIDS as @e[type=arrow,tag=k.HookArrow] if score @s k.UUIDS = .temp k.UUIDS at @s run function khook:attached/as_hook
-
-# If hooked, set age to 0
-execute if score .hooked k.UUIDS matches 1 run data modify entity @s Age set value 0s
+execute as @e[type=arrow,tag=k.HookArrow] if score @s k.UUIDS = .temp k.UUIDS at @s run function khook:attached/as_hook
 
 # If no success remove tag
 execute unless score .success k.UUIDS matches 1 run function khook:control/stop_hook

@@ -1,5 +1,10 @@
 #> khook:shooting/assign_arrow
 
+# Summon marker
+tag @s add .temp
+execute summon marker run function khook:shooting/summon_marker
+tag @s remove .temp
+
 # Tag
 tag @s add k.HookArrow
 
