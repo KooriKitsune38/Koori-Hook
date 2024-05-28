@@ -2,11 +2,11 @@
 
 tag @s add .temp
 
-execute unless entity @s[tag=k.HookAttached] as @e[type=marker,tag=k.HookMarker] if score @s k.UUIDS = .temp k.UUIDS at @s positioned ~ ~.1 ~ run function khook:attached/get_motion
+execute unless entity @s[tag=k.HookAttached] as @e[type=marker,tag=k.HookMarker] if score @s k.UUIDS = .temp k.UUIDS at @s run function khook:attached/get_motion
 
 tag @s add k.HookAttached
 
-execute as @e[type=arrow,tag=k.HookVehicle,distance=..4] if score @s k.UUIDS = .temp k.UUIDS as @p[tag=.temp] run function khook:control/stop_hook
+execute as @e[type=arrow,tag=k.HookVehicle,distance=..3] if score @s k.UUIDS = .temp k.UUIDS as @p[tag=.temp] run function khook:control/stop_hook
 
 tag @s remove .temp
 # Instantiate Raycast
