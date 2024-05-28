@@ -1,14 +1,16 @@
 #> khook:attached/grounded_hook
 
-tag @s add .temp
 
-execute unless entity @s[tag=k.HookAttached] as @e[type=marker,tag=k.HookMarker] if score @s k.UUIDS = .temp k.UUIDS at @s run function khook:attached/get_motion
+tag @s add .temp
+execute unless entity @s[tag=k.HookAttached] as @e[type=marker,tag=k.HookMarker,predicate=khook:uuid_match] at @s run function khook:attached/get_motion
+tag @s remove .temp
 
 tag @s add k.HookAttached
 
-execute as @e[type=arrow,tag=k.HookVehicle,distance=..3] if score @s k.UUIDS = .temp k.UUIDS as @p[tag=.temp] run function khook:control/stop_hook
+execute if entity @e[type=arrow,tag=k.HookVehicle,distance=..2,predicate=khook:uuid_match] run function khook:control/stop_hook
+kill @e[type=arrow,tag=k.HookVehicle,predicate=khook:uuid_match,nbt={inGround:1b}]
 
-tag @s remove .temp
+
 # Instantiate Raycast
 #execute at @s positioned ~ ~1 ~ facing entity @e[type=arrow,tag=.temp,sort=nearest,limit=1] feet run function khook:attached/raycast
 

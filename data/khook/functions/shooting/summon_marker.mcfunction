@@ -1,7 +1,7 @@
 #> khook:shooting/summon_marker
 
 # Add uuid
-scoreboard players operation @s k.UUIDS = .temp k.UUIDS
+scoreboard players operation @s k.UUIDS = .tempPlayer k.UUIDS
 
 # Tag
 tag @s add k.HookMarker

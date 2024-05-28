@@ -10,8 +10,7 @@ tag @s add k.ShotHook
     #> Create Objective
     scoreboard objectives add k.UUIDS dummy
     #> Assign UUID
-    execute store result score @s k.UUIDS run data get entity @s UUID[0]
-    scoreboard players operation .tempPlayer k.UUIDS = @s k.UUIDS
+    execute store result score @s k.UUIDS store result score .tempPlayer k.UUIDS run data get entity @s UUID[0]
 
 # Retrieve Nearby Arrows
 execute as @e[type=arrow,distance=..5] run function khook:shooting/as_arrow

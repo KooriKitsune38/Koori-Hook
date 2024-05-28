@@ -2,7 +2,7 @@
 
 # Check if arrow exists
 scoreboard players operation .temp k.UUIDS = @s k.UUIDS
-execute as @e[type=arrow,tag=k.HookArrow] if score @s k.UUIDS = .temp k.UUIDS at @s run function khook:attached/as_hook
+execute as @e[type=arrow,tag=k.HookArrow,predicate=khook:uuid_match] at @s run function khook:attached/as_hook
 
 # If no success remove tag
 execute unless score .success k.UUIDS matches 1 run function khook:control/stop_hook
